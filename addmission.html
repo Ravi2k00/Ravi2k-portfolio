@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TCSC</title>
+    <link rel="stylesheet" href=".//node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href=".//node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <style>
+        ul{
+            display: flex;
+            justify-content: space-between;
+            background-color: yellow;
+            font-size: 20px;
+            font-family: Arial;
+            padding-top: 10px;
+        }
+        .bi-passport{
+            text-align: center;
+            font-family: Arial;
+            background-color: black;
+            color: white;
+            border-radius: 50px;
+        }
+        .login{
+            border-radius: 50px;
+            text-align: center;
+            padding-left: 50px;
+            display: block;
+            font-size: 25px;
+        }
+        .btn {
+            background-color: blue;
+            font-family: Arial;
+            color: white;
+        }
+
+        .reg {
+            padding-left: 220px;
+            font-family: Arial;
+            border-radius: 30px;
+            width: 250px;
+            background-color: black;
+            color: white;
+        }
+
+        .fill {
+            text-align: center;
+            padding-bottom: 1px;
+            color: gray;
+        }
+        .Login{
+            font-size: 18px;
+            background-color: blue;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <img src=".//image/tcsc.jpg" width="100%" height="120px">
+     <div class="container-fluid"><br>
+        <h1 class="bi bi-passport"> Addmission Form</h1>
+        <a class="login" href="http://127.0.0.1:5500/public/login.html">login first</a>
+        <ul>
+            <li class="nav-item"><a class="nav-link">Home</a></li>
+            <li class="bi bi-info"><a>Abouts</a></li>
+            <li class="bi bi-person">Courses</li>
+            <li class="bi bi-camera-video"> Blogs</li>
+        </ul>
+        <div>
+          <marquee scrollamount="20">
+             <img src=".//image/tcsc1.jpg" width="100%" height="400px">
+             <img src=".//image/tcsc2.jpg" width="100%" height="400px">
+             <img src=".//image/tcsc3.jpg" width="100%" height="400px">
+          </marquee>
+        </div>
+     </div>
+     <form>
+        <h2 class="reg">Registration Form</h2>
+        <p class="fill">Fill out the Form carefully for registration</p>
+        <p>1. Student Name</p>
+        <label for="fname">First Name:</label><br>
+        <input type="text" id="fname" placeholder="Enter here..." name="fname" required><br>
+        <label for="Mname">Middle Name:</label><br>
+        <input type="text" id="Mname" placeholder="Enter here..." name="Mname"><br>
+        <label for="lname">Last Name:</label><br>
+        <input type="text" id="lname" placeholder="Enter here..." name="lname">
+        <p>2. Choose your Gender</p>
+            <dd>
+                <input type="radio" id="Male" name="Gender" value="Male">
+                <label for="Male">Male</label>
+            </dd>
+            <dd>
+                <input type="radio" id="Female" name="Gender" value="Female">
+                <label for="Female">Female</label>
+            </dd>
+            <dd>
+                <input type="radio" id="Other" name="Gender" value="Other">
+                <label for="Other">Other</label>
+            </dd>
+        <p>3. D-O-B</p>
+            <input type="date" min="1998-05-10" max="2024-03-15">
+
+        <p>4. Your Email-Id</p>
+            <input type="text" size="40" placeholder="ex: myname@example.com"><br>
+
+        <p>5. Parmanent Address</p>
+            <textarea name="note" rows="4" cols="60" placeholder="Type Here..."></textarea><br>
+
+            <input type="checkbox" name="yes" value="yes">Both address are same
+
+        <p>6. Prasent Address</p>
+            <textarea name="note" rows="4" cols="60" placeholder="Type Here..."></textarea>
+
+        <p>7. Mobile No.</p>
+            <input type="text" placeholder=" Ex: +91-98765-43210" name="Number">
+
+        <p>8. Tel. No.</p>
+            <input type="text" placeholder="+91(234)(56789)" name="Number">
+
+        <p>9. Select your Course</p>
+            <label for="Course required">
+              <select name="Course" id="Course">
+                <option>Select course</option>
+                <option>Bsc in (Information Technology)</option>
+                <option>B-Tech</option>
+                <option>BBA</option>
+                <option>Bsa in (Data Science)</option>
+                <option>MSC</option>
+                <option>M-tech</option>
+                <option>BCA</option>
+              </select>
+            </label>
+            <br><br>
+        <button class="btn">Save and Continue</button>
+    </form>
+     </form>
+    </main>
+</body>
+</html>
