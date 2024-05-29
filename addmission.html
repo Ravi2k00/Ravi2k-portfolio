@@ -5,18 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TCSC</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href=".//node_modules/bootstrap/dist/css/bootstrap.css">
-    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <style>
         ul{
             display: flex;
+            border-radius: 5px;
             justify-content: space-between;
             background-color: yellow;
             font-size: 20px;
             font-family: Arial;
             padding-top: 10px;
         }
-        .bi-passport{
+        .add{
             text-align: center;
             font-family: Arial;
             background-color: black;
@@ -32,6 +33,7 @@
         }
         .btn {
             background-color: blue;
+            border-radius: 3px;
             font-family: Arial;
             color: white;
         }
@@ -41,48 +43,60 @@
             padding-bottom: 1px;
             color: gray;
         }
-        .Login{
+        .reg{
+            text-align: center;
+            padding-bottom: 1px;
+            color: black;
+            font-weight: bold;
+            text-decoration: underline;
+        }
+        .login{
             font-size: 18px;
-            background-color: blue;
-            color: white;
+            border-radius: 3px;
         }
     </style>
 </head>
-<body class="container">
-    <main>
-        <img src=".//public/images/tcsc.jpg" width="100%" height="120px">
-     <div class="container-fluid"><br>
-        <h1 class="bi bi-passport"> Addmission Form</h1>
-        <a class="login" href="http://127.0.0.1:5500/login.html">login first</a>
+<body class="container-fluid">
+    <form>
+        <div>
+            <img src=".//public/images/tcsc.jpg" width="100%" height="120px">
+            <div class="container-fluid"><br>
+            <h1 class="add"> Addmission Form</h1>
+            <a class="login" href="http://127.0.0.1:5500/login.html">login first</a>
+        </div>
+        <div>
         <ul>
-            <li class="nav-item"><a class="nav-link">Home</a></li>
-            <li class="bi bi-info"><a>Abouts</a></li>
-            <li class="bi bi-person">Courses</li>
-            <li class="bi bi-camera-video"> Blogs</li>
+            <li class="bi bi-house">Home</li>
+            <li class="bi bi-globe">Abouts</li>
+            <li class="bi bi-copy">Courses</li>
+            <li class="bi bi-camera-video">Blogs</li>
         </ul>
+        </div>
         <div>
           <marquee scrollamount="20">
-             <img src=".//public/images/tcsc1.jpg" width="100%" height="400px">
-             <img src=".//public/images/tcsc2.jpg" width="100%" height="400px">
-             <img src=".//public/images/tcsc3.jpg" width="100%" height="400px">
+             <img src=".//public/images/tcsc1.jpg" width="80%" height="400px">
+             <img src=".//public/images/tcsc2.jpg" width="80%" height="400px">
+             <img src=".//public/images/tcsc3.jpg" width="80%" height="400px">
           </marquee>
         </div>
-     </div>
-     <form>
-        <h2 class="reg">Registration Form</h2>
-        <p class="fill">Fill out the Form carefully for registration</p>
-        <p>1. Student Name</p>
-        <label for="fname">First Name:</label><br>
-        <input type="text" id="fname" placeholder="Enter here..." name="fname" required><br>
-        <label for="Mname">Middle Name:</label><br>
-        <input type="text" id="Mname" placeholder="Enter here..." name="Mname"><br>
-        <label for="lname">Last Name:</label><br>
-        <input type="text" id="lname" placeholder="Enter here..." name="lname">
-        <p>2. Choose your Gender</p>
-            <dd>
+        <div>
+            <form>
+                <h2 class="reg">Registration Form</h2>
+                <p class="fill">Fill out the Form carefully for registration</p>
+                <h6>1. Student Name</h6>
+                <label for="fname">First Name:</label>
+                <input type="text" id="fname" placeholder="Enter here..." name="fname" required><br><br>
+                <label for="Mname">Middle Name:</label>
+                <input type="text" id="Mname" placeholder="Enter here..." name="Mname"><br><br>
+                <label for="lname">Last Name:</label>
+                <input type="text" id="lname" placeholder="Enter here..." name="lname">
+            </form>
+        </div><br>
+        <h6>2. Choose your Gender</h6>
+            <div>
                 <input type="radio" id="Male" name="Gender" value="Male">
                 <label for="Male">Male</label>
-            </dd>
+            </div>
             <dd>
                 <input type="radio" id="Female" name="Gender" value="Female">
                 <label for="Female">Female</label>
@@ -91,27 +105,27 @@
                 <input type="radio" id="Other" name="Gender" value="Other">
                 <label for="Other">Other</label>
             </dd>
-        <p>3. D-O-B</p>
-            <input type="date" min="1998-05-10" max="2024-03-15">
+        <h6>3. D-O-B</h6>
+            <input type="date" name="date"><br><br>
 
-        <p>4. Your Email-Id</p>
-            <input type="text" size="40" placeholder="ex: myname@example.com"><br>
+        <h6>4. Your Email-Id</h6>
+            <input type="text" size="40" placeholder="ex: myname@example.com"><br><br>
 
-        <p>5. Parmanent Address</p>
+        <h6>5. Parmanent Address</h6>
             <textarea name="note" rows="4" cols="60" placeholder="Type Here..."></textarea><br>
 
-            <input type="checkbox" name="yes" value="yes">Both address are same
+            <input type="checkbox" name="yes" value="yes">Both address are same<br><br>
 
-        <p>6. Prasent Address</p>
-            <textarea name="note" rows="4" cols="60" placeholder="Type Here..."></textarea>
+        <h6>6. Prasent Address</h6>
+            <textarea name="note" rows="4" cols="60" placeholder="Type Here..."></textarea><br><br>
 
-        <p>7. Mobile No.</p>
-            <input type="text" placeholder=" Ex: +91-98765-43210" name="Number">
+        <h6>7. Mobile No.</h6>
+            <input type="text" placeholder=" Ex: +91-98765-43210" name="Number"><br><br>
 
-        <p>8. Tel. No.</p>
-            <input type="text" placeholder="+91(234)(56789)" name="Number">
+        <h6>8. Tel. No.</h6>
+            <input type="text" placeholder="+91(234)(56789)" name="Number"><br><br>
 
-        <p>9. Select your Course</p>
+        <h6>9. Select your Course</h6>
             <label for="Course required">
               <select name="Course" id="Course">
                 <option>Select course</option>
@@ -127,7 +141,5 @@
             <br><br>
         <button class="btn">Save and Continue</button>
     </form>
-     </form>
-    </main>
-</body>
+  </body>
 </html>
